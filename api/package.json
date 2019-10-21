@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "An Api to Quero Bolsa",
+  "main": "index.js",
+  "repository": "https://github.com/luanribeiros",
+  "author": "Luan Ribeiro",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "json-server --watch datas.json --port 3001"
+  },
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

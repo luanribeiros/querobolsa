@@ -1,0 +1,317 @@
+html,
+body {
+  font-family: sans-serif;
+  color: #1f2d30;
+  width: 100%;
+  height: 100%;
+  .imgLogo {
+    max-width: 100px;
+  }
+  .header {
+    width: 100%;
+
+    &_items {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      padding: 2em 0;
+      justify-content: space-between;
+      div {
+        padding: 0 2em;
+        h3 {
+          color: #007a8d;
+        }
+      }
+    }
+
+    &_bgMenu {
+      width: 100%;
+      background-color: #18acc4;
+
+      &__menu {
+        max-width: 1200px;
+        margin: 0 auto;
+        .active {
+          background-color: #007a8d;
+        }
+        ul {
+          display: flex;
+          a {
+            text-decoration: none;
+            padding: 1em 2em;
+            color: white;
+            font-weight: bold;
+            &:hover {
+              background-color: #007a8d;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    &_sessionMenu {
+      ul {
+        display: flex;
+        padding-left: 1.5em;
+        a {
+          text-decoration: none;
+          padding: 2em 0.5em;
+        }
+      }
+    }
+    h1 {
+      padding: 1em 0 0.5em 1em;
+      font-size: 2em;
+    }
+    p {
+      padding: 1em 2em;
+    }
+
+    &_asideMenu {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      ul {
+        display: flex;
+        border: 1px solid #007a8d;
+        border-radius: 5px;
+        .active {
+          background-color: #007a8d;
+          color: white;
+        }
+        a {
+          text-decoration: none;
+          padding: 1em;
+          color: #007a8d;
+          font-weight: bold;
+          &:hover {
+            background-color: #007a8d;
+            color: white;
+          }
+        }
+      }
+    }
+
+    &_cardBg {
+      display: flex;
+
+      .card {
+        margin-top: 70px;
+        margin-left: 35px;
+        margin-bottom: 250px;
+        width: 275px;
+        height: 400px;
+        box-shadow: 1px 1px 5px rgb(204, 203, 203);
+      }
+
+      &__cardInput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      &__cardComplete {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        div:first-child {
+          p {
+            padding: 2em 0;
+            font-size: 1em;
+          }
+          h2 {
+            padding-bottom: 1em;
+            font-size: 0.8em;
+          }
+          h3,
+          h4 {
+            padding-bottom: 1em;
+          }
+          h3 {
+            font-size: 0.8em;
+          }
+          h4 {
+            font-size: 0.7em;
+          }
+        }
+        div:nth-child(2) {
+          border-bottom: 1px solid grey;
+          border-top: 1px solid grey;
+          width: 220px;
+          h2 {
+            padding-top: 1em;
+          }
+          p {
+            font-size: 0.8em;
+            padding-bottom: 1.5em;
+          }
+        }
+        div:last-child {
+          padding-top: 1em;
+          h3 {
+            font-size: 0.7em;
+            padding-bottom: 1em;
+          }
+          h5 {
+            font-size: 0.8em;
+            padding-bottom: 0.5em;
+          }
+          h4 {
+            padding-bottom: 0.5em;
+          }
+          button {
+            margin: 10px;
+            background: white;
+            border: 1px solid grey;
+            padding: 0.5em 2em;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    background-color: #18acc4;
+    &_bgContacts {
+      width: 100%;
+      background-color: #007a8d;
+      &__contacts {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        div {
+          padding: 2.5em;
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+    &_copy {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4em 0;
+      color: white;
+      text-align: center;
+      font-size: 0.7em;
+    }
+  }
+}
+
+/********* Modal **********/
+div[data-js="modal"] {
+  position: relative;
+  z-index: 999;
+}
+
+.containerModal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &_buttonHide {
+    width: 705px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &_bg {
+    background-color: white;
+    max-width: 705px;
+    max-height: 650px;
+    overflow: scroll;
+    overflow: auto;
+    padding: 2em;
+
+    p {
+      padding-top: 0.5em;
+    }
+  }
+
+  &_select {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    select {
+      margin-top: 10px;
+      width: 300px;
+      padding: 0.5em;
+    }
+  }
+
+  &_inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    &__check {
+      width: 300px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div > input {
+          margin-right: 10px;
+        }
+      }
+      h2 {
+        padding-bottom: 1em;
+      }
+    }
+
+    &__slide {
+      width: 300px;
+      input {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+
+    &__tableHead {
+    }
+
+    &__table {
+      tr,
+      td,
+      th {
+        padding: 1em;
+        border-bottom: 1px solid grey;
+      }
+
+      margin-top: 40px;
+      width: 100%;
+      text-align: left;
+    }
+
+    &__buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      div {
+        display: flex;
+      }
+      div > button {
+        margin-bottom: 30px;
+      }
+      .button {
+        margin-right: 15px;
+      }
+    }
+  }
+}
